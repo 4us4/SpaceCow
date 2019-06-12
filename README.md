@@ -16,7 +16,7 @@ This software is a minimal Rootkit written in pure __Python3__ and does some lit
 - __CrossPlatform__: theoretically it can be run only both Windows and Linux platform, just require Python3.
 - __Encrypted Communication__ : The network comm is completly encrypted using RSA encryption.
 - __Custom TCP Protocol__: You can have multiple theories on what does it mean, but in my opinion sending packets following a specific set of rules is a custom protocol already, infact the sending and the receiving methods between client and server is optimized. Each packet is being splitted in more piecies in order to allow the RSA algorithm to encrypt everything and then each packet is sent following a ACK - SYNC kind of style, so both the client and server are sure that the other received the last packet correctly.
-- __Runtime Payload Execution__ : this is cool, so id order to make the stub less FUD i decided to execute the '_critical payloads_' such as command shell execution, ... in runtime. So in the python script is not written a backdoor functionality for command exec. But the client once triggered will download from remote the custom payload to execute : __SHELL__ commands and __POWERSHELL__ commands. 
+- __Runtime Payload Execution__ : this is cool, so in order to make the stub less FUD i decided to execute the '_critical payloads_' such as command shell execution, ... in runtime. So in the python script is not written a backdoor functionality for command exec. But the client once triggered will download from remote the custom payload to execute : __SHELL__ commands and __POWERSHELL__ commands. 
 
     (P.S. The commands sent using this payloads should be encoded in base64 to avoid F* unicode decoding errors but I didn't done this. )
 
